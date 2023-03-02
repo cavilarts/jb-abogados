@@ -1,3 +1,4 @@
+import Hero from "@/components/Hero";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -6,5 +7,9 @@ const roboto = Roboto({
 });
 
 export default function Home() {
-  return <></>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }
