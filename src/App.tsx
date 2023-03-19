@@ -1,39 +1,33 @@
+import { Card } from "./components/Card";
+import { Hero } from "./components/Hero";
+import { NavBar } from "./components/Navbar";
+
 function App() {
   return (
-    <div className="App">
-      <svg
-        className="absolute -mr-3 top-8 right-1/2 lg:m-0 lg:left-0"
-        width="404"
-        height="392"
-        fill="none"
-        viewBox="0 0 404 392"
-      >
-        <defs>
-          <pattern
-            id="837c3e70-6c3a-44e6-8854-cc48c737b659"
-            x="0"
-            y="0"
-            width="20"
-            height="20"
-            patternUnits="userSpaceOnUse"
-          >
-            <rect
-              x="0"
-              y="0"
-              width="4"
-              height="4"
-              className="text-gray-200"
-              fill="currentColor"
-            ></rect>
-          </pattern>
-        </defs>
-        <rect
-          width="404"
-          height="392"
-          fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"
-        ></rect>
-      </svg>
-    </div>
+    <main className="relative w-screen">
+      <NavBar />
+      <section className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-4 lg:pb-72">
+        <Hero />
+      </section>
+      <section className="relative pt-16 pb-32 overflow-hidden bg-white space-y-24">
+        <Card
+          image="/images/mazo.jpeg"
+          title="Servicios jurídicos integrales"
+          text="Desde derecho mercantil hasta derecho laboral, nuestro equipo de expertos ofrece una amplia gama de servicios jurídicos para proteger sus intereses empresariales."
+        />
+        <Card
+          inverted
+          image="/images/biblioteca.jpeg"
+          title="Asequible y accesible"
+          text="Obtenga asesoramiento personalizado de nuestros experimentados abogados, que comprenden las necesidades específicas de su empresa."
+        />
+        <Card
+          image="/images/justicia.jpeg"
+          title="Asequible y accesible"
+          text="Nuestro enfoque flexible de los precios y la accesibilidad significa que puede acceder a los servicios jurídicos que necesita a un precio que se adapte a su empresa."
+        />
+      </section>
+    </main>
   );
 }
 
