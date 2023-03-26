@@ -5,7 +5,7 @@ import { Specialities } from "./components/Specialities";
 
 function App() {
   return (
-    <main className="relative w-screen w-auto xl:max-w-7xl xl:mx-auto">
+    <main className="relative w-screen xl:max-w-7xl xl:mx-auto">
       <NavBar />
       <section className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-4 lg:pb-72">
         <Hero />

@@ -1,11 +1,20 @@
+import { BsTelephoneFill } from "react-icons/bs";
+import {
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiFillClockCircle,
+  AiFillFacebook,
+  AiOutlineMail,
+} from "react-icons/ai";
+
 import { BackgroundMesh } from "./BackgroundMesh";
 import { EmailForm } from "./EmailForm";
 
 export function Hero() {
   return (
     <section className="p-5">
-      <div className="md:max-w-lg">
-        <div>
+      <div className="flex justify-between items-center flex-wrap gap-8">
+        <div className="w-full md:max-w-lg">
           <h2 className="text-4xl font-bitter font-bold tracking-tight text-gray-900 sm:text-6xl md:text-7xl">
             Servicios jurídicos de confianza.
           </h2>
@@ -14,9 +23,36 @@ export function Hero() {
             que usted y su empresa prospere.{" "}
           </p>
         </div>
+        <div className="w-full md:max-w-fit sm:mt-8 bg-black p-6 rounded-lg md:max-h-72">
+          <p className="text-white text-xl">
+            Llamenos para recibir una consulta gratuita:
+            <a className="flex items-center mt-5" href="tel:+573224454241">
+              <BsTelephoneFill className="mr-4" />
+              <span>322 445 4241</span>
+            </a>
+            <div className="flex align-middle mt-4">
+              <AiFillClockCircle className="mr-4" />
+              <span>Lun- Vi: 9:00am - 06.00pm</span>
+            </div>
+          </p>
+          <p className="text-white text-xl mt-8">
+            O busquenos en nuestras redes sociales:
+          </p>
+          <div className="text-white text-xl flex align-middle justify-evenly">
+            <a href="https://www.facebook.com/" target="_blank">
+              <AiFillFacebook className=" text-5xl" />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <AiFillInstagram className=" text-5xl" />
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <AiFillLinkedin className=" text-5xl" />
+            </a>
+          </div>
+        </div>
       </div>
       <div className="sm:mx-auto sm:px-6 relative mt-0">
-        <div className="py-12 sm:relative sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <div className="py-12 sm:relative sm:py-16 lg:absolute lg:right-0 lg:w-1/2">
           <div className="hidden sm:block relative">
             <div className="absolute inset-y-0 w-screen left-1/2 bg-gray-50 rounded-l-3xl lg:left-80 lg:right-0 lg:w-full"></div>
             <BackgroundMesh />
